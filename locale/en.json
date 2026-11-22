@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "DeepSeek pure chat mode",
+    "description": "A DeepSeek-web-style pure chat surface: only messages and the composer, while tool calls and run details stay off screen (tools may still run). The composer can switch models, reasoning effort, live web search, and image attachments; image understanding depends on the selected model (for example 4.1flash). Open it from the Pure chat pill at the bottom right, switch conversations in the left column, change light/dark at the bottom left, and leave with Leave pure chat at the top right.",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,15 @@
+import fs from 'node:fs'
+
+const source = fs.readFileSync('D:\\harness\\插件\\client.js', 'utf8')
+const zhStart = source.indexOf('const ZH = {')
+const enStart = source.indexOf('const EN = {')
+const zhBlock = source.slice(zhStart, enStart)
+const enBlock = source.slice(enStart, source.indexOf('/* ------------------------------------------------------------------ */\n    /* Event-window projection'))
+const keysOf = (block) => new Set([...block.matchAll(/^\s*'([^']+)':/gm)].map(m => m[1]))
+const zh = keysOf(zhBlock)
+const en = keysOf(enBlock)
+const used = new Set([...source.matchAll(/\bt\('([^']+)'\)/g)].map(m => m[1]))
+console.log('zh', zh.size, 'en', en.size, 'used', used.size)
+console.log('missing zh:', [...used].filter(key => !zh.has(key)))
+console.log('missing en:', [...used].filter(key => !en.has(key)))
+console.log('unused:', [...zh].filter(key => !used.has(key)))

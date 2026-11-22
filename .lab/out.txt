@@ -1,0 +1,19 @@
+﻿index.ts:978: if (spec.trim() === '' || spec.startsWith('-')) throw new ManagementFailure('invalid-spec')
+index.ts:1023: let installSpec: string
+index.ts:1024: try { installSpec = await transport }
+index.ts:1039: ['add', installSpec, ...options?.saveExact === true ? ['--save-exact'] : [], ...registryArguments(registry)],
+index.ts:1056: const failedAt = attributeFailure(run.kind, run.output, parsedForRegistry(installSpec))
+install-spec.ts:9: import { isAbsolute, resolve } from 'node:path'
+install-spec.ts:74: if (path !== spec || isAbsolute(path)) {
+install-spec.ts:75: if (!isAbsolute(path)) throw invalid(spec, 'a local path must be absolute')
+install-spec.ts:118: const paths = parameters.filter(part => part.startsWith('path:'))
+install-spec.ts:119: const others = parameters.filter(part => !part.startsWith('path:'))
+install-spec.ts:138: * is kept; a `file:` or `link:` path, which pnpm records relative to the profile or with `~` for the home
+official-install-target.ts:28: && Object.values(installation.dependencies ?? {}).some(value => value.startsWith('workspace:'))
+official-install-target.ts:57: return { spec: `link:${directory}`, version }
+operations.ts:165: const index = args.findIndex(argument => !argument.startsWith('-'))
+operations.ts:168: return args.slice(index + 1).filter(argument => !argument.startsWith('-'))
+operations.ts:272: if (typeof row.name !== 'string' || row.name.startsWith('.') || row.name.startsWith('/') || row.name.includes(':')) continue
+operations.ts:274: names.add(parts.slice(0, row.name.startsWith('@') ? 2 : 1).join('/'))
+operations.ts:366: const registryFlags = args.filter(argument => argument.startsWith('--registry='))
+tools.ts:162: presentCall: args => ({ card: 'generic', title: 'Manage profile plugins', kind: args.action.startsWith('list_') ? 'read' : 'other', rawInput: args }),

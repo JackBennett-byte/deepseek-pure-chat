@@ -1,0 +1,11 @@
+﻿dispatch.ts:54: export interface AgentEventDispatch {
+index.ts:40: export interface AgentSetupCommit {
+index.ts:160: export interface AgentHandle {
+index.ts:171: export interface AgentFactory {
+index.ts:214: interface AgentEntry {
+index.ts:261: ctx.inject(['typert'], (typeCtx) => {
+runtime-types.ts:32: export interface AgentOptions {
+runtime-types.ts:191: interface Agent {
+runtime-types.ts:252: followup(message: UserMessage): void
+runtime-types.ts:271: inject(message: UserMessage): void
+types.ts:16: export interface Agent {
